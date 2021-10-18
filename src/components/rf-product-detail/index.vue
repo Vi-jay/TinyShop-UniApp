@@ -67,10 +67,10 @@
 							tui-tag-class="tui-tag-share tui-size"
 							shape="circleLeft"
 						>
-							<button class="share-btn" open-type="share" :class="'text-' + themeColor.name" @tap.stop="share()">
-								<text class="iconfont iconfenxiang"></text>
-								<text class="tui-share-text tui-gray">分享</text>
-							</button>
+<!--							<button class="share-btn" open-type="share" :class="'text-' + themeColor.name" @tap.stop="share()">-->
+<!--								<text class="iconfont iconfenxiang"></text>-->
+<!--&lt;!&ndash;								<text class="tui-share-text tui-gray">分享</text>&ndash;&gt;-->
+<!--							</button>-->
 						</rf-tag>
 					</view>
 				</view>
