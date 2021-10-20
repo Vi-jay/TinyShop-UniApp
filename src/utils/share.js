@@ -131,7 +131,7 @@ function onShare(item, shareInfo, callback) {
 	if (item.scene) {
 		shareObj.scene = item.scene;
 	}
-	// uni.share(shareObj);
+	uni.share(shareObj);
 }
 let otherShareList = [
 	{
