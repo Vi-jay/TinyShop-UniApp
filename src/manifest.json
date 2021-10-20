@@ -1,7 +1,7 @@
 {
-    "name" : "小海鲸商城",
+    "name" : "RF商城",
     "appid" : "__UNI__E8F292E", // 自行更换uniapp appid 可登录查看uniapp提供的用户统计 https://tongji.dcloud.net.cn/
-    "description" : "小海鲸商城",
+    "description" : "RF商城",
     "versionName" : "1.3.2",
     "versionCode" : 1,
     "transformPx" : false,
