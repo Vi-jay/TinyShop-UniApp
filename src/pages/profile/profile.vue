@@ -299,6 +299,12 @@ export default {
 		}
   },
 	// 小程序分享
+	onShareAppMessage() {
+		return {
+			title: `欢迎来到${this.appName}`,
+			path: '/pages/index/index'
+		};
+	},
 	async onShow() {
 		// 初始化数据
 		await this.initData();

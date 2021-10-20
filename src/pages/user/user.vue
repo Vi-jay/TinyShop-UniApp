@@ -176,7 +176,12 @@
             }
         },
         // 小程序分享
-
+        onShareAppMessage() {
+            return {
+                title: '欢迎来到RageFrame商城',
+                path: '/pages/index/index'
+            }
+        },
         async onShow() {
             // 初始化数据
             this.initData();
