@@ -107,20 +107,6 @@
 		},
 		onLoad(options) {
 			this.$mStore.commit('logout');
-			/*  #ifdef H5  */
-			if (this.$mPayment.isWechat()) {
-				this.isAuthLoginShow = true;
-			}
-			/*  #endif  */
-			/*  #ifndef H5 */
-			this.isAuthLoginShow = true;
-			/*  #endif  */
-			/*  #ifdef APP-PLUS */
-			// console.log(uni.getSystemInfoSync().system > 13);
-			if (uni.getSystemInfoSync().platform === 'ios') {
-				this.isIosAuthLoginShow = true;
-			}
-			/*  #endif  */
 			// 用户多次点击授权登录会生成多个code 去最后一个code
 			this.code = options.code && options.code.split(',')[options.code.split(',').length - 1];
 			// 如果不是第一次进来 就不需要强制阅读协议

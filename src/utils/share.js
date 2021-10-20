@@ -25,20 +25,7 @@ function onCopy(item, shareInfo, callback) {
 }
 // 更多
 function onMore(item, shareInfo, callback) {
-	plus.share.sendWithSystem(
-		{
-			type: 'text',
-			title: shareInfo.shareTitle || '',
-			href: shareInfo.shareUrl || '',
-			content: shareInfo.shareContent || ''
-		},
-		function(res) {
-			callback && callback(item);
-		},
-		function(err) {
-			console.log(err);
-		}
-	);
+
 }
 // 分享
 function onShare(item, shareInfo, callback) {
@@ -131,7 +118,6 @@ function onShare(item, shareInfo, callback) {
 	if (item.scene) {
 		shareObj.scene = item.scene;
 	}
-	uni.share(shareObj);
 }
 let otherShareList = [
 	{
@@ -149,61 +135,6 @@ let otherShareList = [
 ];
 let platformShareList = [];
 // 获取服务商支持的分享
-uni.getProvider({
-	service: 'share',
-	success: function(res) {
-		if (res.provider.includes('sinaweibo')) {
-			platformShareList = [
-				{
-					icon: '/static/share/icon_weibo.png',
-					text: '新浪微博',
-					onClick: onShare,
-					provider: 'sinaweibo',
-					type: 0
-				}
-			].concat(platformShareList);
-		}
-		if (res.provider.includes('qq')) {
-			platformShareList = [
-				{
-					icon: '/static/share/icon_qq.png',
-					text: 'QQ',
-					onClick: onShare,
-					provider: 'qq',
-					type: 1
-				}
-			].concat(platformShareList);
-		}
-		if (res.provider.includes('weixin')) {
-			platformShareList = [
-				{
-					icon: '/static/share/icon_weixin.png',
-					text: '微信好友',
-					onClick: onShare,
-					provider: 'weixin',
-					scene: 'WXSceneSession',
-					type: 0
-				},
-				{
-					icon: '/static/share/icon_pengyouquan.png',
-					text: '朋友圈',
-					onClick: onShare,
-					provider: 'weixin',
-					scene: 'WXSenceTimeline',
-					type: 0
-				},
-				{
-					icon: '/static/share/ic_xiaochengxu.png',
-					text: '小程序',
-					onClick: onShare,
-					provider: 'weixin',
-					scene: 'WXSceneSession',
-					type: 5
-				}
-			].concat(platformShareList);
-		}
-	}
-});
 // 根据type类型过滤掉不支持的平台
 function platformFilter(data) {
 	console.log(data);

@@ -46,12 +46,6 @@ export default {
 		this.id = event.id;
 		this.getNotifyAnnounceView(event.id);
 	},
-	onShareAppMessage() {
-		return {
-			title: this.banner.title,
-			path: `/pages/index/notice/detail?id=${this.id}`
-		};
-	},
 	methods: {
 		// 获取通知列表
 		async getNotifyAnnounceView(id) {
