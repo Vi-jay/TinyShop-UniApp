@@ -672,19 +672,6 @@
 				thirdPartyQrCodeImg: ''
 			};
 		},
-		async onShareAppMessage () {
-      // #ifdef MP
-      await this.$http.post(`${transmitCreate}`, {
-        topic_type: 'product',
-        topic_id: this.productId
-      }).then(() => {
-        return {
-          title: this.productDetail.name,
-          path: `/pages/product/product?id=${this.productId}`
-        };
-      });
-      // #endif
-		},
 		filters: {
 			time(val) {
 				return moment(val * 1000).format('YYYY-MM-DD HH:mm');

@@ -246,10 +246,6 @@
 				return result;
 			}
 		},
-		onShareAppMessage() {
-			let shareParams = { title: this.share.share_title || `欢迎来到${this.appName}`, path: '/pages/index/index' };
-			return shareParams;
-		},
 		filters: {
 			filterDiscountPrice(val) {
 				const price = val.product && (val.product.price * val.discount) / 100;
@@ -398,7 +394,7 @@
 				this.guessYouLikeProductList = data.guess_you_like;
 				this.newProductList = data.product_new;
 				this.config = data.config;
-				this.$mHelper.handleWxH5Share(this.share.share_title || this.appName, this.share.share_desc || `欢迎来到${this.appName}商城`, this.share.share_link || this.$mConfig.hostUrl, this.share.share_cover || this.$mSettingConfig.appLogo);
+				// this.$mHelper.handleWxH5Share(this.share.share_title || this.appName, this.share.share_desc || `欢迎来到${this.appName}商城`, this.share.share_link || this.$mConfig.hostUrl, this.share.share_cover || this.$mSettingConfig.appLogo);
 			},
 			// 跳转至商品详情页
 			navToDetailPage(data) {
