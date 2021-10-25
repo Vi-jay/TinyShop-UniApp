@@ -2,7 +2,7 @@
     "name" : "RF商城",
     "appid" : "__UNI__E8F292E", // 自行更换uniapp appid 可登录查看uniapp提供的用户统计 https://tongji.dcloud.net.cn/
     "description" : "RF商城",
-    "versionName" : "1.3.4",
+    "versionName" : "1.3.6",
     "versionCode" : 1,
     "transformPx" : false,
     "app-plus" : {

@@ -1,5 +1,5 @@
 <template>
-	<web-view ref='webview' src='https://www.kongfuka.com/'></web-view>
+
 </template>
 <script>
 let wv;
@@ -8,10 +8,29 @@ export default {
 		wv.back();
 	},
 	onReady() {
-		const currentWebview = this.$scope.$getAppWebview(); //此对象相当于html5plus里的plus.webview.currentWebview()。在uni-app里vue页面直接使用plus.webview.currentWebview()无效
-		setTimeout(function() {
+
+		var pages = getCurrentPages();
+
+		var page = pages[pages.length - 1];
+
+		// #ifdef APP-PLUS
+
+		var currentWebview = page.$getAppWebview();
+		const url = "http://m2.aitangka.cn/?app_channel=iOS_mjb&channId=iOS_mjb"
+
+		var wb = plus.webview.create(url, '', {
+
+		top: '38px',
+bottom: '0'
+
+		});
+
+		currentWebview.append(wb);
+setTimeout(function() {
 			wv = currentWebview.children()[0];
 		}, 700);
+
+		// #endif
 	}
 };
 </script>
@@ -19,7 +38,6 @@ export default {
 page {
 	background-color: $page-color-base;
 }
-
 .rf-index {
 	background-color: $color-white;
 
