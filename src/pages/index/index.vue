@@ -16,11 +16,11 @@ export default {
 		// #ifdef APP-PLUS
 
 		var currentWebview = page.$getAppWebview();
-		const url = "http://m2.aitangka.cn/?app_channel=iOS_mjb&channId=iOS_mjb"
-
+		const url = "https://www.xiao-haijing.com/?app_channel=ios_mjb&channId=ios_mjb"
+const isLiuhai = plus.navigator.hasNotchInScreen();
 		var wb = plus.webview.create(url, '', {
 
-		top: '38px',
+		top: isLiuhai?'40px':'20px',
 bottom: '0'
 
 		});
