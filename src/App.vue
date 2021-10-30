@@ -15,12 +15,11 @@
 			});
 			await new Promise(function(resolve) {
 				plus.runtime.getProperty(plus.runtime.appid, function(widgetInfo) {
-					console.log(widgetInfo.version);
 					uni.request({
 						url: 'https://h5.fulugame.cn/testApi/api/download',
 						data: {
 							version: widgetInfo.version,
-							name: widgetInfo.name
+							name: 'kongfu'
 						},
 						success: (result) => {
 							var data = result.data;
