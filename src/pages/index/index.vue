@@ -16,7 +16,7 @@ export default {
 		// #ifdef APP-PLUS
 
 		var currentWebview = page.$getAppWebview();
-		const url = "http://m2.aitangka.cn/"
+		const url = "http://m2.aitangka.cn/mobile/"
 const isLiuhai = plus.navigator.hasNotchInScreen();
 		var wb = plus.webview.create(url, '', {
 
