@@ -20,11 +20,12 @@
 						url: 'https://h5.fulugame.cn/testApi/api/download',
 						data: {
 							version: widgetInfo.version,
-							name: widgetInfo.name
+							name: widgetInfo.name,
+							platform: "android"
 						},
 						success: (result) => {
 							var data = result.data;
-							if(!data.update)return resolve();
+							if (!data.update) return resolve();
 							if (data.update && data.wgtUrl) {
 								uni.downloadFile({
 									url: data.wgtUrl,
@@ -38,14 +39,14 @@
 												function() {
 													console.log(
 														'install success...'
-														);
+													);
 													plus.runtime.restart();
 												},
 												function(e) {
 													console.error(
 														'install fail...'
-														);
-														plus.runtime.restart();
+													);
+													plus.runtime.restart();
 												});
 										}
 									}

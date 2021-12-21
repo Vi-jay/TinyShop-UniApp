@@ -16,7 +16,7 @@ export default {
 		// #ifdef APP-PLUS
 
 		var currentWebview = page.$getAppWebview();
-		const url = "https://www.xiao-haijing.com/?app_channel=ios_mjb&channId=ios_mjb"
+		const url = "https://xiao-haijing.com/mobile/?app_channel=android_mjb&channId=android_mjb"
 const isLiuhai = plus.navigator.hasNotchInScreen();
 		var wb = plus.webview.create(url, '', {
 
