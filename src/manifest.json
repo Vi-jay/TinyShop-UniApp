@@ -2,7 +2,7 @@
     "name" : "小蓝鲸",
     "appid" : "__UNI__E8F292E", // 自行更换uniapp appid 可登录查看uniapp提供的用户统计 https://tongji.dcloud.net.cn/
     "description" : "小蓝鲸",
-    "versionName" : "1.3.8",
+    "versionName" : "1.3.9",
     "versionCode" : 1,
     "transformPx" : false,
     "app-plus" : {
